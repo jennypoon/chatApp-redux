@@ -1,0 +1,1 @@
+Generate container components for each presentational components using connect() from redux
