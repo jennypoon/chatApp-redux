@@ -34,6 +34,9 @@ const store = createStore(
   applyMiddleware(sagaMiddleware)
 )
 
+// register ourselves as present in the chat
+store.dispatch(addUser(username))
+
 //1. initalize socket so we can reference it inside the saga
 const socket = setupSocket(store.dispatch, username)
 //2. pass dispatch function and username
